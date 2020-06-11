@@ -1,8 +1,11 @@
-package com.ing.zoo;
+package com.ing.zoo.Animal;
+
+import com.ing.zoo.Animal.Type.Carnivorous;
+import com.ing.zoo.Animal.Type.TrickAnimal;
 
 import java.util.Random;
 
-public class Tiger {
+public class Tiger extends Animal implements Carnivorous, TrickAnimal {
     public String name;
     public String helloText;
     public String eatText;
@@ -37,5 +40,9 @@ public class Tiger {
             trick = "scratches ears";
         }
         System.out.println(trick);
+    }
+
+    public String getName() {
+        return name;
     }
 }

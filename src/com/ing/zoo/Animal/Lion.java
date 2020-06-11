@@ -1,6 +1,8 @@
-package com.ing.zoo;
+package com.ing.zoo.Animal;
 
-public class Lion {
+import com.ing.zoo.Animal.Type.Carnivorous;
+
+public class Lion extends Animal implements Carnivorous {
     public String name;
     public String helloText;
     public String eatText;
@@ -19,5 +21,9 @@ public class Lion {
     {
         eatText = "nomnomnom thx mate";
         System.out.println(eatText);
+    }
+
+    public String getName() {
+        return name;
     }
 }

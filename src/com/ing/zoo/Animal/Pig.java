@@ -1,8 +1,12 @@
-package com.ing.zoo;
+package com.ing.zoo.Animal;
+
+import com.ing.zoo.Animal.Type.Carnivorous;
+import com.ing.zoo.Animal.Type.Herbivorous;
+import com.ing.zoo.Animal.Type.TrickAnimal;
 
 import java.util.Random;
 
-public class Pig {
+public class Pig extends Animal implements Carnivorous, Herbivorous, TrickAnimal {
     public String name;
     public String helloText;
     public String eatText;
@@ -14,7 +18,7 @@ public class Pig {
 
     public void sayHello()
     {
-        helloText = "splash";
+        helloText = "oink oink";
         System.out.println(helloText);
     }
 
@@ -43,5 +47,9 @@ public class Pig {
             trick = "runs in circles";
         }
         System.out.println(trick);
+    }
+
+    public String getName() {
+        return name;
     }
 }

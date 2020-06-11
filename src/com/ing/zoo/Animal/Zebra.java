@@ -1,12 +1,11 @@
-package com.ing.zoo;
+package com.ing.zoo.Animal;
 
-import java.util.Random;
+import com.ing.zoo.Animal.Type.Herbivorous;
 
-public class Zebra {
+public class Zebra extends Animal implements Herbivorous {
     public String name;
     public String helloText;
     public String eatText;
-    public String trick;
 
     public Zebra()
     {
@@ -22,5 +21,9 @@ public class Zebra {
     {
         eatText = "munch munch zank yee bra";
         System.out.println(eatText);
+    }
+
+    public String getName() {
+        return name;
     }
 }
